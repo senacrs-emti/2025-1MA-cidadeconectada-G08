@@ -1,9 +1,15 @@
 *{
     padding: 0px;
     margin: 0px;
-    background-color: #EFFCFF;
+    
 }
-
+body{
+    background-color:   #EFFCFF;;
+}
+h1{
+    margin-left: 600px;
+    font-size: 70px;
+}
 #retangulo-verde{
     float: left;
     display: block;
@@ -12,34 +18,59 @@
     background-color: #27AE60;
 }
 #Quadrado-branco1{
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 600px;
     display: block;
     float: left;
     background-color: #FEFDFB;
-    margin-left: 200px;
+    margin-left: 400px;
+    position: absolute;
 }
 #Quadrado-branco2{
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 600px;
     display: block;
     float: left;
     background-color: #FEFDFB;
-    margin-left: 200px;
+    margin-left: 1100px;
+    position: relative;
 }
 #circulo1{
-    width: 100px;
-    height: 100px;
+    width: 190px;
+    height: 190px;
     float: left;
     display: block;
     background-color: #D5F5E3;
     border-radius: 100%;
+    margin-left: 100px;
+    margin-top: 30px;
 }
 #circulo2{
-    width: 100px;
-    height: 100px;
+     width: 190px;
+    height: 190px;
     float: left;
     display: block;
     background-color: #D5F5E3;
     border-radius: 100%;
+    margin-left: 100px;
+    margin-top: 30px;
+}
+#p1{
+    margin-top: 300px;
+    position: absolute;
+}
+
+#leia-mais{
+    margin-top: 300px;
+    margin-left: 150px;
+    width: 200px;
+    height: 25px;
+    border: 0px;
+    background-color: #7D5FFF;
+    position: relative;
+}
+#foto-reciclagem{
+    width: 130px;
+    height: 130px;
+    
 }
