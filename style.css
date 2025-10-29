@@ -112,5 +112,15 @@ h1{
 }
 #onda{
     width: 100%;
-    margin-top: -200px;
+    height: 170px;
+    margin-top: 11%;
+    position: relative;
+    
 }
+#arvore{
+    position: absolute;
+    right: 0px;
+    top:760px;
+    width: 200px;
+}
+
