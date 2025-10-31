@@ -3,9 +3,9 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #prin{
-    background-color: #9ce19c;
-    height: 310px;
-    padding-top: 30px;
+    background-color: #69da69;
+    height: 300px;
+    padding-top: 25px;
     width: 30%;
     margin-top: 50px;
 }
@@ -37,4 +37,17 @@
     border-style: solid;
     background-color: green;
     color: white;
+}
+footer{
+    background-color: green;
+    height: 15px;
+    color: white;
+}
+h6{
+    margin-left: 10px;
+}
+#map{ 
+    height: 300px; 
+    width: 70%;
+    float: right;
 }
