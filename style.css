@@ -1,25 +1,25 @@
 
-body {
+body{
   margin: 0;
   font-family: Arial, sans-serif;
 }
-header {
+header{
   background-color: #00b871;
   padding: 10px 20px;
 }
-.menu {
+.menu{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.menu .item {
+.menu .item{
   display:block;
   align-items: center;
   margin-right: 60px;
   text-decoration: none;
   color: white;
 }
-.menu .item img {
+.menu .item img{
   width: 20px;
   height: 20px;
   margin-right: 6px;
@@ -30,7 +30,7 @@ header {
   margin-right: 6px;
 }
 
-.textos {
+.textos{
   display: flex;
   align-items: center;
   width: auto ;
