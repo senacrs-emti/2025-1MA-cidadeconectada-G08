@@ -1,0 +1,15 @@
+#lixeiras{
+    width: 100%;
+    opacity: 20%;
+    position: absolute  ;
+    display: flex;
+}
+#retangulo-formulário{
+    width:27% ;
+    height: 500px;
+    background-color:green ;
+    display: block;
+    float: left;
+    position: relative;
+    
+}
