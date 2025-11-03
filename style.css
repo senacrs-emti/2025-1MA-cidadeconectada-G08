@@ -2,6 +2,9 @@
     margin: 0%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+body{
+    background-color: #d5f5e3;
+}
 #prin{
     background-color: #69da69;
     height: 300px;
@@ -27,7 +30,7 @@
     border-style: solid;
     outline: none
 }
-#botao{
+#endereco{
     height: 27px;
     margin-left: 55px;
     margin-top: 20px;
