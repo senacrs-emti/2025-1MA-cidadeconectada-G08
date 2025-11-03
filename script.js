@@ -4,7 +4,6 @@ console.log(map)
 
 function success(pos){
     console.log(pos.coords.latitude, pos.coords.longitude);
-    h2.textContent = `Latitude:${pos.coords.latitude}, Longitude${pos.coords.longitude}`;
 
     var map = L.map('map').setView([pos.coords.latitude, pos.coords.longitude], 18);
 
