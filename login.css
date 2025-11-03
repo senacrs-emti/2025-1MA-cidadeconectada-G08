@@ -16,19 +16,28 @@
     background-color:green ;
     position: relative;
     display: flex;
-
+margin-top: 7%;
 }
+
 #email{
 margin-top: 20%;
-margin-left: 25%;
+margin-left: 15%;
+height: 7%;
+width: 65%;
 }
 #senha{
     margin-top: 20%;
-    margin-left: 25%    ;
+    margin-left: 15%    ;
+    height: 7%;
+    width: 65%;
 
 }
 #submit{
-    margin-top: 20%;
-    margin-left: 40%;
-
+    margin-top: 40%;
+    margin-left: 15%;
+    height: 7%;
+    width: 65%;
+    background-color: #A8E6C3;
+    border: none;
+    border-radius: 14px;
 }
