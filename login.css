@@ -10,7 +10,7 @@
 }
 #retangulo-formulário{
     width:27% ;
-    height: 500px;
+    height: 41em;
     background-color:rgb(14, 211, 14) ;
     position: relative;
     margin-top: 7%;
@@ -20,20 +20,19 @@
 }
 
 #email{
-height: 30px;
+height: 3em;
 width: 65%;
 margin-top: 12%;
 
-
 }
 #senha{
-   height: 30px;
+   height:3em;
     width: 65%;
     margin-top:30%;
 }
 #submit{
     margin-top: 20%;
-    height: 30px;
+    height: 40px;
     width: 65%;
     background-color: #A8E6C3;
     border: none;
@@ -42,4 +41,6 @@ margin-top: 12%;
 #titulo{
 
     color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
 }
