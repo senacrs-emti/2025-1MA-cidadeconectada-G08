@@ -2,13 +2,11 @@
 #conteiner{
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 #lixeiras{
     width: 100%;
     opacity: 20%;
-    position: absolute  ;
-
+    position: absolute;
 }
 #retangulo-formulário{
     width:27% ;
@@ -16,7 +14,7 @@
     background-color:green ;
     position: relative;
     display: flex;
-margin-top: 7%;
+    margin-top: 7%;
 }
 
 #email{
@@ -30,7 +28,6 @@ width: 65%;
     margin-left: 15%    ;
     height: 7%;
     width: 65%;
-
 }
 #submit{
     margin-top: 40%;
@@ -41,3 +38,4 @@ width: 65%;
     border: none;
     border-radius: 14px;
 }
+
