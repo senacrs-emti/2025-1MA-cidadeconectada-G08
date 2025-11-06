@@ -1,41 +1,47 @@
 
+
 #conteiner{
     display: flex;
     justify-content: center;
 }
 #lixeiras{
     width: 100%;
+    height: 98%;
     opacity: 20%;
     position: absolute;
 }
 #retangulo-formulário{
     width:27% ;
-    height: 41em;
-    background-color:rgb(14, 211, 14) ;
+    height: 35em;
+    background-color:#2ECC71;
     position: relative;
-    margin-top: 7%;
+    margin-top: 2.5%;
     text-align: center;
    align-items: center;
    justify-content: center;
+  
 }
 
 #email{
 height: 3em;
 width: 65%;
 margin-top: 12%;
-
+ border-radius: 10px;
+border: none;
 }
 #senha{
    height:3em;
     width: 65%;
     margin-top:30%;
+    border-radius: 10px;
+    border: none;
 }
 #submit{
     margin-top: 20%;
     height: 40px;
     width: 65%;
-    background-color: #A8E6C3;
-    border: none;
+    background-color: #27AE60
+    border: 1px solid black;
     border-radius: 14px;
 }
 #titulo{
