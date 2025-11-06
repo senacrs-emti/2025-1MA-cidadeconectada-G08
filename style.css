@@ -84,6 +84,10 @@ h1{
     border: 0px;
     background-color: #7D5FFF;
     position: relative;
+    transform: 0.3s;
+}
+#leia-mais:hover{
+    opacity: 0.6;
 }
 #leia-mais2{
     margin-top: 140px;
@@ -93,6 +97,10 @@ h1{
     border: 0px;
     background-color: #7D5FFF;
     position: relative;
+    transform: 0.3s;
+}
+#leia-mais2:hover{
+    opacity: 0.6;
 }
 #foto-reciclagem{
     width: 55%;
