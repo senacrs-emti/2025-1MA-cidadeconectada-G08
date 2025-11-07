@@ -26,6 +26,7 @@ body{
     margin-top: 20px;
     margin-left: 30px;
     width: 70%;
+    height: 20px;
     border-width: 0px 0px 0px 0px;
     border-style: solid;
     outline: none
@@ -36,10 +37,13 @@ body{
     margin-top: 20px;
     border-radius: 15px;
     width: 130px;
-    border-width: 0px 0px 0px 0px;
-    border-style: solid;
+    border: none;
     background-color: green;
     color: white;
+    transform: 0.3s;
+}
+#endereco:hover{
+    opacity: 0.6;
 }
 footer{
     background-color: green;
@@ -53,4 +57,30 @@ h6{
     height: 325px; 
     width: 70%;
     float: right;
+}
+.instagram{
+    width: 10px;
+    float: right;
+    margin-top: -10px;
+    margin-right: 53px;
+}
+#insta{
+    float: right;
+    margin-top: -11px;
+    font-size: 10px;
+    margin-right: 8px;
+    color: white;
+}
+.watsa{
+    width: 14px;
+    margin-top: -12px;
+    float: right;
+    margin-right: 90px;
+}
+#wats{
+    float: right;
+    margin-top: -11px;
+    font-size: 10px;
+    margin-right: -82px;
+    color: white;
 }

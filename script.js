@@ -29,26 +29,8 @@ async function AcharEnd (){
     const endereco = document.getElementById("endereco").value;
 
     if (!endereco){
-        alert("digite um endereço!!");
+        alert("digite um endereço!!+");
         return;
-    }
-
-    const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(endereco)}`;
-
-    const resposta = await fetch(url);
-    const dados = await resposta.json();
-
-    if(dados.length > 0) {
-        const lat = dados[0].lat;
-        const lon = dados[0].lon;
-
-        map.setView([lat, lon], 17)
-
-        L.marker([lat, lon]).addTo(map)
-        .bindPopup("Seu endereço aqui!!")
-        .openPopup();
-    } else {
-        alert("Endereço incorreto")
     }
 }
 
