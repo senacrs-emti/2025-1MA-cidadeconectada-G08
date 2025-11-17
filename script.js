@@ -25,12 +25,36 @@ var watchID = navigator.geolocation.watchPosition(success, error, {
     timeout: 5000
 });
 
-async function AcharEnd (){
+async function procurarEndereco() {
     const endereco = document.getElementById("endereco").value;
 
-    if (!endereco){
-        alert("digite um endereço!!+");
+    if (!endereco) {
+        alert("Digite um endereço!");
         return;
     }
-}
 
+    const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(endereco)}`;
+
+    const resposta = await fetch(url, {
+        headers: {
+            'User-Agent': 'SeuApp/1.0'  // recomendado pelo Nominatim
+        }
+    });
+
+    const dados = await resposta.json();
+
+    if (dados.length === 0) {
+        alert("Endereço não encontrado!");
+        return;
+    }
+
+    const lat = dados[0].lat;
+    const lon = dados[0].lon;
+
+    map.setView([lat, lon], 17);
+
+    L.marker([lat, lon])
+     .addTo(map)
+     .bindPopup("Endereço encontrado!")
+     .openPopup();
+}

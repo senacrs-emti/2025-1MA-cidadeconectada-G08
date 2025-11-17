@@ -7,36 +7,39 @@ body{
 }
 #prin{
     background-color: #69da69;
-    height: 300px;
-    padding-top: 25px;
+    height: 489px;
+    padding-top: 2%;
     width: 30%;
-    margin-top: 50px;
+    margin-top: 3.9%;
 }
 #ache{
     margin-left: 30px;
+    font-size: 50px;
     margin-bottom: 5px;
+    margin-top: 50px;
 }
 #loc{
     margin-left: 30px;
-    margin-right: 10px;
+    font-size: 15px;
+    margin-right: 50px;
     color: rgb(61, 60, 60);
 }
 #end{
-    border-radius: 10px;
-    margin-top: 20px;
+    border-radius: 20px;
+    margin-top: 50px;
     margin-left: 30px;
-    width: 70%;
-    height: 20px;
+    width: 80%;
+    height: 25px;
     border-width: 0px 0px 0px 0px;
     border-style: solid;
     outline: none
 }
 #endereco{
-    height: 27px;
-    margin-left: 55px;
+    height: 40px;
+    margin-left: 95px;
     margin-top: 20px;
-    border-radius: 15px;
-    width: 130px;
+    border-radius: 20px;
+    width: 180px;
     border: none;
     background-color: green;
     color: white;
@@ -47,40 +50,41 @@ body{
 }
 footer{
     background-color: green;
-    height: 15px;
+    height: 21px;
     color: white;
 }
 h6{
+    font-size: 15px;
     margin-left: 10px;
 }
 #map{ 
-    height: 325px; 
+    height: 514px; 
     width: 70%;
     float: right;
 }
 .instagram{
-    width: 10px;
+    width: 15px;
     float: right;
-    margin-top: -10px;
-    margin-right: 53px;
+    margin-top: -15px;
+    margin-right: 75px;
 }
 #insta{
     float: right;
-    margin-top: -11px;
-    font-size: 10px;
-    margin-right: 8px;
+    margin-top: -16px;
+    font-size: 15px;
+    margin-right: 10px;
     color: white;
 }
 .watsa{
-    width: 14px;
-    margin-top: -12px;
+    width: 20px;
+    margin-top: -17px;
     float: right;
-    margin-right: 90px;
+    margin-right: 140px;
 }
 #wats{
     float: right;
-    margin-top: -11px;
-    font-size: 10px;
-    margin-right: -82px;
+    margin-top: -15px;
+    font-size: 15px;
+    margin-right: -120px;
     color: white;
 }
