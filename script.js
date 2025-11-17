@@ -6,3 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "./sobre.html"; 
   });
 });*/
+
+let local = navigator.geolocation.getCurrentPosition;
+console.log(local);

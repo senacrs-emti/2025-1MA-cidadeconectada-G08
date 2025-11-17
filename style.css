@@ -1,3 +1,7 @@
+*{
+    margin: 0%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -45,4 +49,40 @@ header {
     text-decoration: none;
     color: white;  
     margin-right: -800px;
+}
+#prin{
+    background-color: #9ce19c;
+    height: 310px;
+    padding-top: 30px;
+    width: 30%;
+    margin-top: 50px;
+}
+#ache{
+    margin-left: 30px;
+    margin-bottom: 5px;
+}
+#loc{
+    margin-left: 30px;
+    margin-right: 10px;
+    color: rgb(61, 60, 60);
+}
+#end{
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 70%;
+    border-width: 0px 0px 0px 0px;
+    border-style: solid;
+    outline: none
+}
+#botao{
+    height: 27px;
+    margin-left: 55px;
+    margin-top: 20px;
+    border-radius: 15px;
+    width: 130px;
+    border-width: 0px 0px 0px 0px;
+    border-style: solid;
+    background-color: green;
+    color: white;
 }
