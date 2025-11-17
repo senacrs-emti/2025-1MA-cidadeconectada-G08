@@ -7,5 +7,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });*/
 
-let local = navigator.geolocation.getCurrentPosition;
-console.log(local);
+
