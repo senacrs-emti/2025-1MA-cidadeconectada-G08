@@ -1,1 +1,41 @@
-
+*{
+    background-color: #53AF61;
+}
+h1{
+    margin-left: 20px;
+    font-size: 55px;
+    color: whitesmoke;
+}
+h2{
+    margin-left: 20px;
+    font-size: 30px;
+    line-height: 3;
+    height: auto;
+    width: 730px;
+    background-color: whitesmoke    ;
+}
+aside{
+    width: 545px;
+    height: 436px;
+    background-color: whitesmoke;
+    display: block;
+    float: right;
+    margin-top: -458px;
+    margin-right: 20px;
+}
+div{
+    width: 400px;
+    height: 300px;
+    background-color: rgb(196, 196, 196);    
+    margin-left: 50px;
+    margin-top: 50px;
+    font-size: 50px;
+    padding-left: 50px;
+    padding-top: 20px;
+    line-height: 3;
+}
+input{
+    margin-left: 20px;
+    width: 300px;
+    height: 50px;
+}
