@@ -22,3 +22,19 @@
            };
     })
 
+
+    const textoEscondido2 = document.getElementById("texto-escondido2")
+    const div2 = document.getElementById("Quadrado-branco2")
+    const btnLeiaMais2 = document.getElementById("leia-mais2")
+
+    btnLeiaMais2.addEventListener("click", function(){
+        if (textoEscondido2.style.display === "none")
+        (textoEscondido2.style.display = "block")
+        (div2.style.display = "600px")
+        (btnLeiaMais2.innerHTML = "Leia menos")
+
+        else(textoEscondido2.style.display = "none");
+        (div2.style.display.height = "440px" )
+        (btnLeiaMais2.innerHTML = "Leia mais")
+    }
+)
