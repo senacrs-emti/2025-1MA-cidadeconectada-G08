@@ -24,7 +24,7 @@ body{
     margin-right: 50px;
     color: rgb(61, 60, 60);
 }
-#end{
+#endereco{
     border-radius: 20px;
     margin-top: 50px;
     margin-left: 30px;
@@ -34,7 +34,7 @@ body{
     border-style: solid;
     outline: none
 }
-#endereco{
+#end{
     height: 40px;
     margin-left: 95px;
     margin-top: 20px;
@@ -45,7 +45,7 @@ body{
     color: white;
     transform: 0.3s;
 }
-#endereco:hover{
+#end:hover{
     opacity: 0.6;
 }
 footer{
@@ -85,6 +85,5 @@ h6{
     float: right;
     margin-top: -15px;
     font-size: 15px;
-    margin-right: -120px;
     color: white;
 }

@@ -1,31 +1,42 @@
-let h2 = document.querySelector('h2');
-var map;
-console.log(map)
+let map;
+let marcador;
 
-function success(pos){
-    console.log(pos.coords.latitude, pos.coords.longitude);
+function success(pos) {
+    const lat = pos.coords.latitude;
+    const lon = pos.coords.longitude;
 
-    var map = L.map('map').setView([pos.coords.latitude, pos.coords.longitude], 18);
+    if (!map) {
+        map = L.map('map').setView([lat, lon], 16);
 
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+    }
 
-    L.marker([pos.coords.latitude, pos.coords.longitude]).addTo(map)
-        .bindPopup('Você está aqui!!')
+    if (marcador) {
+        map.removeLayer(marcador);
+    }
+
+    marcador = L.marker([lat, lon])
+        .addTo(map)
+        .bindPopup("Você está aqui!!")
         .openPopup();
+        L.marker([-30.034, -51.230]).addTo(map);
+        L.marker([-30.040, -51.220]).addTo(map);
+        L.marker([-30.050, -51.210]).addTo(map);
+        
 }
 
-function error(err){
-    console.log(err)
+function error(err) {
+    console.log("Erro ao pegar localização:", err);
 }
- 
-var watchID = navigator.geolocation.watchPosition(success, error, {
+
+navigator.geolocation.watchPosition(success, error, {
     enableHighAccuracy: true,
     timeout: 5000
 });
 
-async function procurarEndereco() {
+async function AcharEnd() {
     const endereco = document.getElementById("endereco").value;
 
     if (!endereco) {
@@ -35,26 +46,36 @@ async function procurarEndereco() {
 
     const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(endereco)}`;
 
-    const resposta = await fetch(url, {
-        headers: {
-            'User-Agent': 'SeuApp/1.0'  // recomendado pelo Nominatim
+    try {
+        const resposta = await fetch(url, {
+            headers: {
+                "User-Agent": "BioPonto/1.0" 
+            }
+        });
+
+        const dados = await resposta.json();
+
+        if (dados.length === 0) {
+            alert("Endereço não encontrado!");
+            return;
         }
-    });
 
-    const dados = await resposta.json();
+        const lat = dados[0].lat;
+        const lon = dados[0].lon;
 
-    if (dados.length === 0) {
-        alert("Endereço não encontrado!");
-        return;
+        map.setView([lat, lon], 17);
+
+        if (marcador) {
+            map.removeLayer(marcador);
+        }
+
+        marcador = L.marker([lat, lon])
+            .addTo(map)
+            .bindPopup("Endereço encontrado!")
+            .openPopup();
+
+    } catch (e) {
+        console.log("Erro ao buscar endereço:", e);
+        alert("Erro ao buscar endereço.");
     }
-
-    const lat = dados[0].lat;
-    const lon = dados[0].lon;
-
-    map.setView([lat, lon], 17);
-
-    L.marker([lat, lon])
-     .addTo(map)
-     .bindPopup("Endereço encontrado!")
-     .openPopup();
 }
