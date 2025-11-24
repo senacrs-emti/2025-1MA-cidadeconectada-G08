@@ -44,8 +44,8 @@ h1{
     
 }
 #circulo1{
-    width: 60%;
-    height: 45%;
+    width: 200px;
+    height: 200px;
     float: left;
     display: flex;
     background-color: #D5F5E3;
@@ -55,8 +55,8 @@ h1{
     align-items: center;
 }
 #circulo2{
-     width: 60%;
-    height: 45%;
+     width: 200px;
+    height: 200px;
     float: left;
     display: flex;
     background-color: #D5F5E3;
@@ -67,26 +67,30 @@ h1{
 }
 #p1{
     margin-top: 270px;
-    position: absolute;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
 }
 #p2{
     margin-top: 270px;
-    position: absolute;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
 }
 #texto-escondido{
     display: none;
+    display: flex;
+    margin-top: 20%;
+    text-align: center;
 }
 #texto-escondido2{
     display: none;
+    display: flex;
+    margin-top: 20%;
+    text-align: center;
 }
 
 
 #leia-mais{
-    margin-top: 140px;
+    margin-top: 50px;
     margin-left: 70px;
     width: 200px;
     height: 25px;
@@ -99,7 +103,7 @@ h1{
     opacity: 0.6;
 }
 #leia-mais2{
-    margin-top: 140px;
+    margin-top: 50px;
     margin-left: 70px;
     width: 200px;
     height: 25px;
