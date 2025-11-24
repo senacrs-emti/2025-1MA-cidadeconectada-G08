@@ -79,11 +79,25 @@ h6{
     width: 20px;
     margin-top: -17px;
     float: right;
-    margin-right: 140px;
+    margin-right: 150px;
 }
 #wats{
     float: right;
     margin-top: -15px;
     font-size: 15px;
     color: white;
+}
+#addlixeira{
+    height: 40px;
+    margin-left: 95px;
+    margin-top: 20px;
+    border-radius: 20px;
+    width: 180px;
+    border: none;
+    background-color: green;
+    color: white;
+    transform: 0.3s;
+}
+#addlixeira:hover{
+    opacity: 0.6;
 }

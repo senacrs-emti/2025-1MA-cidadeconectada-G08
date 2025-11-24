@@ -1,42 +1,59 @@
 let map;
-let marcador;
+let modoAdicionar = false;
 
-function success(pos) {
-    const lat = pos.coords.latitude;
-    const lon = pos.coords.longitude;
-
-    if (!map) {
-        map = L.map('map').setView([lat, lon], 16);
-
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap contributors'
-        }).addTo(map);
-    }
-
-    if (marcador) {
-        map.removeLayer(marcador);
-    }
-
-    marcador = L.marker([lat, lon])
-        .addTo(map)
-        .bindPopup("Você está aqui!!")
-        .openPopup();
-        L.marker([-30.034, -51.230]).addTo(map);
-        L.marker([-30.040, -51.220]).addTo(map);
-        L.marker([-30.050, -51.210]).addTo(map);
-        
-}
-
-function error(err) {
-    console.log("Erro ao pegar localização:", err);
-}
-
-navigator.geolocation.watchPosition(success, error, {
-    enableHighAccuracy: true,
-    timeout: 5000
+const iconeLixeira = L.icon({
+    iconUrl: "./img/pointlixeira.png",
+    iconSize: [50, 50],
+    iconAnchor: [20, 40],
+    popupAnchor: [0, -40]
 });
 
-async function AcharEnd() {
+function iniciarMapa() {
+    map = L.map("map").setView([-30.0346, -51.2177], 13);
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+    }).addTo(map);
+
+    carregarLixeirasSalvas();
+}
+
+iniciarMapa();
+
+const iconeUsuario = L.icon({
+    iconUrl: "./img/pointuser.png",
+    iconSize: [50, 50],
+    iconAnchor: [20, 40]
+});
+
+let marcadorUsuario;
+
+map.whenReady(() => {
+    if (navigator.geolocation) {
+        navigator.geolocation.watchPosition(
+            (pos) => {
+                const lat = pos.coords.latitude;
+                const lon = pos.coords.longitude;
+
+                if (!marcadorUsuario) {
+                    marcadorUsuario = L.marker([lat, lon], { icon: iconeUsuario })
+                        .addTo(map)
+                        .bindPopup("Você está aqui!");
+                } else {
+                    marcadorUsuario.setLatLng([lat, lon]);
+                }
+
+                map.setView([lat, lon], 17);
+            },
+            (err) => {
+                console.log("Não foi possível obter localização:", err);
+            },
+            { enableHighAccuracy: true }
+        );
+    }
+});
+
+function AcharEnd() {
     const endereco = document.getElementById("endereco").value;
 
     if (!endereco) {
@@ -44,38 +61,68 @@ async function AcharEnd() {
         return;
     }
 
-    const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(endereco)}`;
-
-    try {
-        const resposta = await fetch(url, {
-            headers: {
-                "User-Agent": "BioPonto/1.0" 
+    fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${endereco}`)
+        .then(res => res.json())
+        .then(data => {
+            if (data.length === 0) {
+                alert("Endereço não encontrado!");
+                return;
             }
+
+            const lat = data[0].lat;
+            const lon = data[0].lon;
+
+            map.setView([lat, lon], 18);
+
+            L.marker([lat, lon]).addTo(map)
+                .bindPopup("Você buscou aqui!")
+                .openPopup();
         });
+}
 
-        const dados = await resposta.json();
+function ModoAdicionar() {
+    modoAdicionar = !modoAdicionar;
 
-        if (dados.length === 0) {
-            alert("Endereço não encontrado!");
-            return;
-        }
-
-        const lat = dados[0].lat;
-        const lon = dados[0].lon;
-
-        map.setView([lat, lon], 17);
-
-        if (marcador) {
-            map.removeLayer(marcador);
-        }
-
-        marcador = L.marker([lat, lon])
-            .addTo(map)
-            .bindPopup("Endereço encontrado!")
-            .openPopup();
-
-    } catch (e) {
-        console.log("Erro ao buscar endereço:", e);
-        alert("Erro ao buscar endereço.");
+    if (modoAdicionar) {
+        alert("Clique no mapa para adicionar uma lixeira!");
+        document.getElementById("addlixeira").innerText = "Cancelar";
+    } else {
+        document.getElementById("addlixeira").innerText = "Adicionar Lixeira no Mapa";
     }
+}
+
+map.on("click", function (e) {
+    if (!modoAdicionar) return;
+
+    const lat = e.latlng.lat;
+    const lon = e.latlng.lng;
+
+    adicionarLixeira(lat, lon);
+    salvarLixeira(lat, lon);
+
+    alert("Lixeira adicionada!");
+
+    modoAdicionar = false;
+    document.getElementById("addlixeira").innerText = "Adicionar Lixeira no Mapa";
+});
+
+function salvarLixeira(lat, lon) {
+    let lixeiras = JSON.parse(localStorage.getItem("lixeiras")) || [];
+
+    lixeiras.push({ lat, lon });
+
+    localStorage.setItem("lixeiras", JSON.stringify(lixeiras));
+}
+
+function carregarLixeirasSalvas() {
+    let lixeiras = JSON.parse(localStorage.getItem("lixeiras")) || [];
+
+    lixeiras.forEach(l => {
+        adicionarLixeira(l.lat, l.lon);
+    });
+}
+
+function adicionarLixeira(lat, lon) {
+    L.marker([lat, lon], { icon: iconeLixeira }).addTo(map)
+        .bindPopup("Lixeira adicionada por outras pessoas");
 }
