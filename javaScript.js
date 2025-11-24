@@ -30,11 +30,11 @@
     btnLeiaMais2.addEventListener("click", function(){
         if (textoEscondido2.style.display === "none")
         (textoEscondido2.style.display = "block")
-        (div2.style.display = "600px")
-        (btnLeiaMais2.innerHTML = "Leia menos")
+        (div2.style.height = "600px")
+        (btnLeiaMais2.innerHTML = "Leia menos");
 
         else(textoEscondido2.style.display = "none");
-        (div2.style.display.height = "440px" )
+        (div2.style.height = "440px" )
         (btnLeiaMais2.innerHTML = "Leia mais")
     }
 )
