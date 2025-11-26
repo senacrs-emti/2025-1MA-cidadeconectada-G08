@@ -75,7 +75,7 @@ function AcharEnd() {
             map.setView([lat, lon], 18);
 
             L.marker([lat, lon]).addTo(map)
-                .bindPopup("Você buscou aqui!")
+                .bindPopup("Endereço encontrado!")
                 .openPopup();
         });
 }
@@ -103,7 +103,7 @@ map.on("click", function (e) {
     alert("Lixeira adicionada!");
 
     modoAdicionar = false;
-    document.getElementById("addlixeira").innerText = "Adicionar Lixeira no Mapa";
+    document.getElementById("addlixeira").innerText = "Adicionar Ecoponto ao Mapa";
 });
 
 function salvarLixeira(lat, lon) {
