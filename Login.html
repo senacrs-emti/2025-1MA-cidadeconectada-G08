@@ -16,13 +16,26 @@
     <div id="retangulo-formulário">
         <h1 id="titulo">LOGIN</h1>
         <form action="">
-            <input type="email"  id="email" placeholder="Email">
-            <input type="password"  id="senha" placeholder="Senha">
-            <input type="submit"  id="submit">    
+            <input type="text"  id="login" placeholder="login">
+            <input type="password"  id="senha" placeholder="senha">
+            <input type="submit"  id="submit" onclick="logar(); return false">    
         </form>
     </div>
     </div>
     </main>
-<footer></footer>
+    <script>
+        function logar(){
+
+            var login = document.getElementById("login").value;
+            var senha = document.getElementById("senha").value;
+
+            if(login =="admin" && senha == "adimin"){
+                alert("sucesso");
+                location.href = "index.html";
+            }else{
+                alert("Usuario não encontrado");
+            }
+    }                
+    </script>
 </body>
 </html>
