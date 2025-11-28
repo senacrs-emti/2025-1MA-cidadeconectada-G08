@@ -90,7 +90,6 @@ function ModoAdicionar() {
         document.getElementById("addlixeira").innerText = "Adicionar Lixeira no Mapa";
     }
 }
-header
 
 map.on("click", function (e) {
     if (!modoAdicionar) return;
