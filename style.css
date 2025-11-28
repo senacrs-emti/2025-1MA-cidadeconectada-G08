@@ -5,12 +5,73 @@
 body{
     background-color: #d5f5e3;
 }
+span{
+  margin-left: 5px;
+  font-size: 20px;
+}
+header {
+  background-color: #00b871;
+  padding: 10px 20px;
+  width: 100%;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu .item {
+  display:block;
+  align-items: center;
+  margin-right: 60px;
+  text-decoration: none;
+  color: white;
+}
+.menu .item img {
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  margin-top: 10px;
+}
+.menu .item .inicio{
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+}
+
+.textos {
+  display: flex;
+  align-items: center;
+  width: auto ;
+  margin-left: 100px;  
+}
+.menu .text1{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap:30px;
+}
+.menu .text2{
+    text-decoration: none;
+    color: white;  
+    margin-right: -800px;
+}
+#botao{
+    height: 27px;
+    margin-left: 55px;
+    margin-top: 20px;
+    border-radius: 15px;
+    width: 130px;
+    border-width: 0px 0px 0px 0px;
+    border-style: solid;
+    background-color: green;
+    color: white;
+}
 #prin{
     background-color: #69da69;
     height: 489px;
     padding-top: 2%;
     width: 30%;
-    margin-top: 3.9%;
 }
 #ache{
     margin-left: 30px;
