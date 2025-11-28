@@ -1,0 +1,55 @@
+
+
+#conteiner{
+    display: flex;
+    justify-content: center;
+}
+#lixeiras{
+    width: 100%;
+    height: 59rem;
+    opacity: 20%;
+    position: absolute;
+}
+#retangulo-formulário{
+    height: 35rem;
+    background-color:#2ECC71;
+    position: relative;
+    margin-top: 10rem;
+    text-align: center;
+   align-items: center;
+   justify-content: center;
+  
+}
+
+#login{
+height: 3em;
+width: 65%;
+margin-top: 12%;
+ border-radius: 10px;
+border: none;
+}
+#senha{
+   height:3em;
+    width: 65%;
+    margin-top:30%;
+    border-radius: 10px;
+    border: none;
+}
+#submit{
+    margin-top: 20%;
+    height: 40px;
+    width: 65%;
+    background-color:#ECF0F1;
+    border:1px solid black;
+    border-radius: 14px;
+    transition: 0.3s;
+}
+#submit:hover{
+    opacity: 0.6;
+}
+#titulo{
+
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+}
