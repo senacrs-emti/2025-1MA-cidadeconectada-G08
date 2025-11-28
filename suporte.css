@@ -108,10 +108,9 @@ img{
   transition: 0.4s;
   font-size: 20px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  border-radius: 15px; /* Deixando arredondado, como você tinha nos botões */
+  border-radius: 15px;
 }
 
-/* Estilo quando o botão está ativo (clicado) ou no hover */
 .accordion:hover {
   background-color: #ccc; 
 }
@@ -120,15 +119,12 @@ img{
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
-
-
-/* Estilo para a resposta (o painel) */
 .panel {
   padding: 0 18px;
-  background-color: white; /* Fundo branco para o texto da resposta */
-  max-height: 0; /* Começa escondido */
+  background-color: white;
+  max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out; /* Transição para o efeito suave */
+  transition: max-height 0.2s ease-out; 
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   margin-left: 20px;
