@@ -162,3 +162,6 @@ h6{
 #addlixeira:hover{
     opacity: 0.6;
 }
+img.item {
+    height: 20px;
+}
