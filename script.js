@@ -27,7 +27,7 @@ const iconeUsuario = L.icon({
 });
 
 let marcadorUsuario;
-
+ 
 map.whenReady(() => {
     if (navigator.geolocation) {
         navigator.geolocation.watchPosition(
@@ -87,7 +87,7 @@ function ModoAdicionar() {
         alert("Clique no mapa para adicionar uma lixeira!");
         document.getElementById("addlixeira").innerText = "Cancelar";
     } else {
-        document.getElementById("addlixeira").innerText = "Adicionar Lixeira no Mapa";
+        document.getElementById("addlixeira").innerText = "Adicionar EcoPontos no Mapa";
     }
 }
 
@@ -100,10 +100,10 @@ map.on("click", function (e) {
     adicionarLixeira(lat, lon);
     salvarLixeira(lat, lon);
 
-    alert("Lixeira adicionada!");
+    alert("Ecoponto adicionado adicionada!");
 
     modoAdicionar = false;
-    document.getElementById("addlixeira").innerText = "Adicionar Ecoponto ao Mapa";
+    document.getElementById("addlixeira").innerText = "Adicionar EcoPonto ao Mapa";
 });
 
 function salvarLixeira(lat, lon) {
