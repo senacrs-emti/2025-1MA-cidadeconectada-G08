@@ -61,7 +61,7 @@ function AcharEnd() {
         return;
     }
 
-    fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${endereco}`)
+    fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${endereco},Porto Alegre`)
         .then(res => res.json())
         .then(data => {
             if (data.length === 0) {
