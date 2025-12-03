@@ -1,4 +1,4 @@
-*{
+body{
     background-color: #53AF61;
 }
 h1{
@@ -10,8 +10,10 @@ h1{
 header {
   background-color:green;
   padding: 10px 20px;
-  width: 97.1%;
+  width: 98.7%;
   height: 25px;
+  margin-top: -8px;
+  margin-left: -8px;
 }
 
 .menu {
@@ -25,12 +27,14 @@ header {
   margin-right: 60px;
   text-decoration: none;
   color: white;
+
 }
 .menu .item img {
   width: 20px;
   height: 20px;
   margin-right: 6px;
   margin-top: 10px;
+
 }
 .menu .item .inicio{
   width: 20px;
