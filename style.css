@@ -12,8 +12,10 @@ span{
 header {
   background-color:green;
   padding: 10px 20px;
-  width: 97.1%;
+  width: 97.67%;
   height: 25px;
+  margin-top: -8px;
+  margin-left: -8px;
 }
 
 .menu {
@@ -27,12 +29,14 @@ header {
   margin-right: 60px;
   text-decoration: none;
   color: white;
+
 }
 .menu .item img {
   width: 20px;
   height: 20px;
   margin-right: 6px;
-  margin-top: 10px;
+  margin-top: 3px;
+
 }
 .menu .item .inicio{
   width: 20px;
@@ -44,7 +48,7 @@ header {
   display: flex;
   align-items: center;
   width: auto ;
-  margin-left: 100px;  
+  margin-left: 595px;  
 }
 .menu .text1{
     text-decoration: none;
@@ -115,7 +119,7 @@ header {
 footer{
     background-color: green;
     height: 21px;
-    width: 1366px;
+    width: 1386px;
     color: white;
     margin-left: -20px;
     
@@ -126,9 +130,9 @@ h6{
 }
 #map{ 
     height: 567px; 
-    width: 73%;
+    width: 71%;
     float: right;
-    margin-right:-17.2px ;
+    margin-right: 1px;
 }
 .instagram{
     width: 15px;

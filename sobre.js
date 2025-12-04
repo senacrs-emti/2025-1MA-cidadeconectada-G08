@@ -11,16 +11,17 @@
             //se o display do texto escondido no css for "none"
             //quando clicar no botão irá se tornar "block", e denominará a div height como 600px
            if(textoEscondido.style.display === "none"){;
-            (textoEscondido.style.display = "block");
-            (div.style.height = "600px");
-            (btnLeiaMais.innerHTML ="leia menos" );
+            textoEscondido.style.display = "block";
+            div.style.height = "600px";
+            btnLeiaMais.innerHTML ="Leia menos" ;
            }
            //senão, quando clicar no botão novamente, irá retomar tudo ao normal
-           else{textoEscondido.style.display = "none";
+           else{
+           textoEscondido.style.display = "none";
            div.style.height = "440px"; 
            btnLeiaMais.innerHTML = "Leia mais";
            };
-    })
+    });
 
 
     const textoEscondido2 = document.getElementById("texto-escondido2")
