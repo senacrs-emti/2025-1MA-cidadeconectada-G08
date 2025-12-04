@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Biopontos</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+     <header>
+        <div id="retangulo-verde">
+            <nav class="menu">
+                <a href="./index.html" class="item">
+                <img src="download (1).png" alt="Início">
+                <span>Início</span>
+                </a>
+                <a href="./suporte.html" class="item">
+                <img src="suporte.png" alt="Suporte">
+                <span>Suporte</span>
+                </a>
+                <a href="./sobre.html" class="item" id="sobre-link">
+                <img src="info.png" alt="Sobre">
+                <span>Sobre</span>
+                </a>
+                <div class="textos">
+                <a href="./Login.html" class="text1">Cadastre-se | Entrar</a>
+                </div>
+                
+
+                 <img src="reciclagem.png" id="reciclagem">
+               
+          
+            </nav>
+        </div> 
+       
+    </header>
+    <main>
+    
+    <div id="conteiner">
+    <img src="fotos-/simbolo-da-reciclagem.jpg " id="lixeiras">
+    <div id="retangulo-formulário">
+        <h1 id="titulo">CADASTRE-SE</h1>
+        <form action="">
+            <input type="text"  id="email" placeholder="Digite seu e-mail">
+            <input type="password"  id="senha" placeholder="Crie sua senha">
+            <input type="password"  id="senha3" placeholder="Comfirme sua senha">
+            <input type="submit"  id="submit" onclick="logar(); return false">    
+        </form>
+    </div>
+   
+
+    <div id="retangulo-formulário2">
+        <h1 id="titulo2">LOGIN</h1>
+        <form action="">
+            <input type="text"  id="email2" placeholder="login">
+            <input type="password"  id="senha2" placeholder="senha">
+            <input type="submit"  id="submit2" onclick="logar(); return false">    
+  
+        </form>
+    </div>
+    </div>
+
+    </main>
+    <script>
+        function logar(){
+
+            var login = document.getElementById("login").value;
+            var senha = document.getElementById("senha").value;
+
+            if(login =="admin" && senha == "adimin"){
+                alert("sucesso");
+                location.href = "index.html";
+            }else{
+                alert("Usuario não encontrado");
+            }
+    }                
+    </script>
+</body>
+</html>

@@ -3,14 +3,82 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 body{
-    background-color: #d5f5e3;
+    background-color: #ffffff;
+}
+span{
+  margin-left: 5px;
+  font-size: 20px;
+}
+header {
+  background-color:green;
+  padding: 10px 20px;
+  width: 97.67%;
+  height: 25px;
+  margin-top: -8px;
+  margin-left: -8px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu .item {
+  display:block;
+  align-items: center;
+  margin-right: 60px;
+  text-decoration: none;
+  color: white;
+
+}
+.menu .item img {
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  margin-top: 3px;
+
+}
+.menu .item .inicio{
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+}
+
+.textos {
+  display: flex;
+  align-items: center;
+  width: auto ;
+  margin-left: 595px;  
+}
+.menu .text1{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap:30px;
+}
+.menu .text2{
+    text-decoration: none;
+    color: white;  
+    margin-right: -800px;
+}
+#botao{
+    height: 27px;
+    margin-left: 55px;
+    margin-top: 20px;
+    border-radius: 15px;
+    width: 130px;
+    border-width: 0px 0px 0px 0px;
+    border-style: solid;
+    background-color: green;
+    color: white;
 }
 #prin{
     background-color: #69da69;
-    height: 489px;
+    height: 540px;
     padding-top: 2%;
-    width: 30%;
-    margin-top: 3.9%;
+    margin-left: -20px;
+    width: 31%;
 }
 #ache{
     margin-left: 30px;
@@ -51,16 +119,20 @@ body{
 footer{
     background-color: green;
     height: 21px;
+    width: 1386px;
     color: white;
+    margin-left: -20px;
+    
 }
 h6{
     font-size: 15px;
     margin-left: 10px;
 }
 #map{ 
-    height: 514px; 
-    width: 70%;
+    height: 567px; 
+    width: 71%;
     float: right;
+    margin-right: 1px;
 }
 .instagram{
     width: 15px;
@@ -100,4 +172,7 @@ h6{
 }
 #addlixeira:hover{
     opacity: 0.6;
+}
+img.item {
+    height: 20px;
 }
