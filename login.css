@@ -23,7 +23,7 @@ header {
 } 
 #reciclagem{
   width: 20px;
-  margin-left: 30px;
+  margin-left: -30px;
 
 }
 .menu {
@@ -64,6 +64,8 @@ header {
     display: flex;
     align-items: center;
     gap:30px;
+     margin-left: -164px;
+    margin-top: -16px;
 }
 .menu .text2{
     text-decoration: none;
